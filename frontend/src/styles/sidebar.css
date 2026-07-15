@@ -1,0 +1,42 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  padding: 28px 18px;
+  color: white;
+  background-color: #183d2c;
+}
+
+.sidebar h2 {
+  margin: 0 0 35px;
+  padding: 0 10px;
+  font-size: 21px;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar nav button {
+  width: 100%;
+  padding: 12px;
+  color: #d3e1d8;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.sidebar nav button:hover {
+  color: white;
+  background-color: #28543e;
+}
+
+.sidebar nav button:first-child {
+  color: white;
+  background-color: #2d6649;
+}
