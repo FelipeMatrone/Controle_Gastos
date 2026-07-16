@@ -4,6 +4,7 @@ import App from './App'
 import './styles/global.css'
 import './styles/sidebar.css'
 import './styles/dashboard.css'
+import './styles/pessoas.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

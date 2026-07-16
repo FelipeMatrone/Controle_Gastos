@@ -18,8 +18,11 @@ const cards = [
     value: 'R$ 0,00',
   },
 ]
+interface DashboardProps {
+  onCadastrarPessoa: () => void
+}
 
-function Dashboard() {
+function Dashboard({ onCadastrarPessoa }: DashboardProps) {
   return (
     <section className="dashboard">
       <header className="dashboard-header">
@@ -29,7 +32,10 @@ function Dashboard() {
           <p>Acompanhe os gastos das pessoas cadastradas.</p>
         </div>
 
-        <Button text="Cadastrar pessoa" />
+        <Button
+  text="Cadastrar pessoa"
+  onClick={onCadastrarPessoa}
+/>
       </header>
 
       <div className="cards">

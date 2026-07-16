@@ -36,7 +36,45 @@
   background-color: #28543e;
 }
 
-.sidebar nav button:first-child {
+.sidebar nav button.active {
   color: white;
   background-color: #2d6649;
+}
+
+.sidebar nav > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-arrow {
+  font-size: 10px;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 2px 0 8px;
+}
+
+.submenu button {
+  width: 100%;
+  padding: 10px 12px 10px 28px !important;
+  color: #d3e1d8 !important;
+  background-color: transparent !important;
+  border: none;
+  font-size: 14px;
+  text-align: left;
+}
+
+.submenu button:hover {
+  color: white !important;
+  background-color: transparent !important;
+}
+
+.submenu button.submenu-active {
+  color: white !important;
+  background-color: transparent !important;
+  font-weight: bold;
 }
