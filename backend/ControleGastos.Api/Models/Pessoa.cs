@@ -15,4 +15,14 @@ public class Pessoa
 
     [Range(0, 130, ErrorMessage = "A idade deve estar entre 0 e 130 anos.")]
     public int Idade { get; set; }
+
+    [Required(ErrorMessage = "A data de nascimento é obrigatória.")]
+    public DateOnly DataNascimento { get; set; }
+
+    [EmailAddress(ErrorMessage = "Informe um e-mail válido.")]
+    [MaxLength(150, ErrorMessage = "O e-mail deve ter no máximo 150 caracteres.")]
+    public string? Email { get; set; }
+
+    [MaxLength(20, ErrorMessage = "O telefone deve ter no máximo 20 caracteres.")]
+    public string? Telefone { get; set; }
 }

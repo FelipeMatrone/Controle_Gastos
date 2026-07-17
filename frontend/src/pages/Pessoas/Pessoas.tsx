@@ -33,18 +33,42 @@ function Pessoas() {
 
   const idade = calcularIdade(dataNascimento)
 
-  function cadastrarPessoa(event: React.FormEvent<HTMLFormElement>) {
+  async function cadastrarPessoa(
+    event: React.FormEvent<HTMLFormElement>,
+  ) {
     event.preventDefault()
 
     const pessoa = {
       nome,
       dataNascimento,
       idade,
-      email,
-      telefone,
+      email: email || null,
+      telefone: telefone || null,
     }
 
-    console.log(pessoa)
+    try {
+      const resposta = await fetch('http://localhost:5114/api/Pessoas', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(pessoa),
+      })
+
+      if (!resposta.ok) {
+        throw new Error('Nao foi possivel cadastrar a pessoa.')
+      }
+
+      alert('Pessoa cadastrada com sucesso!')
+
+      setNome('')
+      setDataNascimento('')
+      setEmail('')
+      setTelefone('')
+    } catch (erro) {
+      console.error(erro)
+      alert('Ocorreu um erro ao cadastrar a pessoa.')
+    }
   }
 
   return (
