@@ -64,4 +64,30 @@ public class PessoasController : ControllerBase
 
         return NoContent();
     }
+
+    // Atualiza os dados de uma pessoa que ja existe.
+    // O Id recebido pela URL indica qual pessoa sera alterada.
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Editar(int id, Pessoa pessoaAtualizada)
+    {
+        var pessoa = await _context.Pessoas.FindAsync(id);
+
+        if (pessoa == null)
+        {
+            return NotFound("Pessoa nao encontrada.");
+        }
+
+        // Copia para o registro atual os novos dados recebidos.
+        pessoa.Nome = pessoaAtualizada.Nome;
+        pessoa.Idade = pessoaAtualizada.Idade;
+        pessoa.DataNascimento = pessoaAtualizada.DataNascimento;
+        pessoa.Email = pessoaAtualizada.Email;
+        pessoa.Telefone = pessoaAtualizada.Telefone;
+
+        await _context.SaveChangesAsync();
+
+        return Ok(pessoa);
+    }
+
 }
