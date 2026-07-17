@@ -52,3 +52,35 @@ button {
   color: white;
   background-color: #b83f35;
 }
+
+.delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  color: #d86b78;
+  background-color: #fff1f2;
+  border: 1px solid #e5a0a8;
+  border-radius: 8px;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.delete-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.delete-button:hover {
+  color: white;
+  background-color: #b83f35;
+  border-color: #b83f35;
+}

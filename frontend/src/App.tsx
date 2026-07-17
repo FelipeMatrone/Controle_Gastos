@@ -2,15 +2,23 @@ import { useState } from 'react'
 import Sidebar from './components/Sidebar'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Pessoas from './pages/Pessoas/Pessoas'
+import ListarPessoas from './pages/Pessoas/ListarPessoas'
 
 function App() {
+  // Guarda qual pagina deve aparecer na area principal.
   const [paginaAtual, setPaginaAtual] = useState('dashboard')
 
+  // Escolhe o componente de acordo com a opcao selecionada no menu.
   function mostrarPagina() {
     if (paginaAtual === 'cadastrar-pessoa') {
       return <Pessoas />
     }
 
+    if (paginaAtual === 'listar-pessoas') {
+      return <ListarPessoas />
+    }
+
+    // O Dashboard e exibido quando nenhuma das opcoes acima estiver ativa.
     return (
       <Dashboard
         onCadastrarPessoa={() => setPaginaAtual('cadastrar-pessoa')}
