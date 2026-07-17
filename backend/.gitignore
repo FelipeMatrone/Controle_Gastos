@@ -1,0 +1,17 @@
+# Arquivos gerados pelo .NET
+**/bin/
+**/obj/
+
+# Banco local
+*.db
+*.db-shm
+*.db-wal
+
+# Arquivos gerados pelo front-end
+**/node_modules/
+**/dist/
+
+# Editores
+.vs/
+.vscode/
+.idea/
