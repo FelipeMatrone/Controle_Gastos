@@ -84,3 +84,35 @@ button {
   background-color: #b83f35;
   border-color: #b83f35;
 }
+
+.edit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  color: #236746;
+  background-color: #f0f8f4;
+  border: 1px solid #9bc5ae;
+  border-radius: 8px;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.edit-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.edit-button:hover {
+  color: white;
+  background-color: #236746;
+  border-color: #236746;
+}
