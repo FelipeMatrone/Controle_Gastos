@@ -116,3 +116,8 @@ th {
   color: #6b7280;
   text-align: center;
 }
+
+.recent-card small {
+  color: #6b7280;
+  font-size: 13px;
+}
