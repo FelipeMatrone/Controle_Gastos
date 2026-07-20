@@ -6,6 +6,7 @@ import './styles/sidebar.css'
 import './styles/dashboard.css'
 import './styles/pessoas.css'
 import './styles/transacoes.css'
+import './styles/totais.css'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

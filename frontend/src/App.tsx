@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard/Dashboard'
 import Pessoas from './pages/Pessoas/Pessoas'
 import ListarPessoas from './pages/Pessoas/ListarPessoas'
 import Transacoes from './pages/Transacoes/Transacoes'
+import Totais from './pages/Totais/Totais'
 
 function App() {
   // Guarda qual pagina deve aparecer na area principal.
@@ -20,8 +21,12 @@ function App() {
     }
 
     if (paginaAtual === 'transacoes') {
-  return <Transacoes />
-}
+      return <Transacoes />
+   }
+
+     if (paginaAtual === 'totais') {
+      return <Totais />
+   }
     // O Dashboard e exibido quando nenhuma das opcoes acima estiver ativa.
     return (
       <Dashboard
