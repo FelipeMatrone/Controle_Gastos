@@ -1,0 +1,259 @@
+.transactions-page {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.transactions-page__header {
+  margin-bottom: 28px;
+}
+
+.transactions-page__header > span {
+  color: #236746;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.transactions-page__header h1 {
+  margin: 8px 0;
+  font-size: 32px;
+}
+
+.transactions-page__header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.transaction-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  padding: 28px;
+  background-color: white;
+  border: 1px solid #e1e7e3;
+  border-radius: 12px;
+}
+
+.transaction-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transaction-field--full {
+  grid-column: 1 / -1;
+}
+
+.transaction-field label,
+.transaction-type legend {
+  color: #374151;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.transaction-field input,
+.person-modal__search {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+}
+
+.transaction-field input:focus,
+.person-modal__search:focus {
+  border-color: #236746;
+  box-shadow: 0 0 0 3px rgba(35, 103, 70, 0.12);
+}
+
+.person-search {
+  display: flex;
+  gap: 8px;
+}
+
+.person-search input {
+  flex: 1;
+  background-color: #f9fafb;
+}
+
+.person-search button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: #236746;
+}
+
+.person-search svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.transaction-type {
+  display: flex;
+  grid-column: 1 / -1;
+  gap: 24px;
+  padding: 0;
+  border: none;
+}
+
+.transaction-type legend {
+  margin-bottom: 12px;
+}
+
+.transaction-type label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transaction-type__disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.minor-warning {
+  grid-column: 1 / -1;
+  margin: -8px 0 0;
+  padding: 10px 12px;
+  color: #92400e;
+  background-color: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.transaction-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  grid-column: 1 / -1;
+  padding-top: 6px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.transactions-list {
+  margin-top: 28px;
+  padding: 24px;
+  background-color: white;
+  border: 1px solid #e1e7e3;
+  border-radius: 12px;
+}
+
+.transactions-list h2 {
+  margin: 0 0 20px;
+}
+
+.transaction-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.transaction-badge--expense {
+  color: #991b1b;
+  background-color: #fee2e2;
+}
+
+.transaction-badge--income {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(17, 24, 39, 0.55);
+}
+
+.person-modal {
+  width: 100%;
+  max-width: 600px;
+  padding: 24px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.person-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.person-modal__header h2 {
+  margin: 0 0 6px;
+}
+
+.person-modal__header p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.person-modal__header > button {
+  padding: 0;
+  color: #6b7280;
+  background: none;
+  border: none;
+  font-size: 28px;
+}
+
+.person-modal__search {
+  margin-bottom: 16px;
+}
+
+.person-modal__list {
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.person-modal__list > p {
+  padding: 20px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.person-option {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+  cursor: pointer;
+}
+
+.person-option:last-child {
+  border-bottom: none;
+}
+
+.person-option:hover {
+  background-color: #f3f8f5;
+}
+
+.person-option small {
+  color: #6b7280;
+}
+
+.person-modal__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}

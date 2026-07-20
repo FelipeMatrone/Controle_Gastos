@@ -72,10 +72,13 @@ function Sidebar({
             </button>
           </div>
         )}
-
-        <button type="button">
-          Transações
-        </button>
+        <button
+  className={paginaAtual === 'transacoes' ? 'active' : ''}
+  type="button"
+  onClick={() => mudarPagina('transacoes')}
+>
+  Transações
+</button>
 
         <button type="button">
           Totais
